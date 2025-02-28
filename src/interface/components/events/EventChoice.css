@@ -1,0 +1,66 @@
+/* /Users/montysharma/Documents/v8/MMV08/src/interface/components/events/EventChoice.css */
+
+.event-choice {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.event-choice:hover {
+  background-color: #e8e8e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-choice-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.event-choice-disabled:hover {
+  background-color: #f5f5f5;
+  transform: none;
+  box-shadow: none;
+}
+
+.event-choice-text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.event-choice-requirements {
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+  margin-top: 8px;
+  color: #666;
+}
+
+.event-choice-requirement {
+  margin-bottom: 6px;
+}
+
+.event-choice-probability {
+  font-weight: 500;
+  color: #b27d12;
+}
+
+.requirement-label {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.requirement-list {
+  margin: 4px 0 8px 20px;
+  padding: 0;
+}
+
+.requirement-list li {
+  margin-bottom: 2px;
+}

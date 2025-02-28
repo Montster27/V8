@@ -5,7 +5,7 @@
  * It handles the conversion between game time and real time, and provides
  * utilities for time manipulation and comparison.
  */
-export class TimeValue {
+class TimeValue {
   private _timestamp: number; // Unix timestamp in milliseconds
   private _timeScale: number; // How fast game time progresses relative to real time
 
@@ -112,6 +112,20 @@ export class TimeValue {
   }
 
   /**
+   * Convert TimeValue to string representation (ISO format)
+   */
+  toString(): string {
+    return this.date.toISOString();
+  }
+
+  /**
+   * Create a TimeValue from a string representation (ISO format)
+   */
+  static fromString(dateString: string): TimeValue {
+    return new TimeValue(new Date(dateString).getTime());
+  }
+
+  /**
    * Convert to plain object for storage
    */
   toJSON() {
@@ -137,3 +151,8 @@ export class TimeValue {
     return new TimeValue(startDate.getTime());
   }
 }
+
+// Add default export
+export default TimeValue;
+// Also export as named export for backward compatibility
+export { TimeValue };

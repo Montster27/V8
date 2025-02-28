@@ -1,9 +1,79 @@
+/**
+ * /Users/montysharma/Documents/v8/MMV08/src/App.css
+ */
+
+:root {
+  --primary-color: #4e54c8;
+  --secondary-color: #8f94fb;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 .App {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+header {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.panels-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.panels-container > * {
+  flex: 1;
+  min-width: 300px;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
   text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
 }
 
 button {
@@ -13,8 +83,24 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--primary-color);
   color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .App {
+    padding: 2rem;
+  }
 }

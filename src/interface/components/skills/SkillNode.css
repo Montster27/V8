@@ -1,0 +1,109 @@
+/**
+ * /Users/montysharma/Documents/v8/MMV08/src/interface/components/skills/SkillNode.css
+ */
+
+.skill-node {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.skill-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Node sizes based on tiers */
+.skill-node-size-xs {
+  width: 60px;
+  height: 60px;
+}
+
+.skill-node-size-sm {
+  width: 70px;
+  height: 70px;
+}
+
+.skill-node-size-md {
+  width: 80px;
+  height: 80px;
+}
+
+.skill-node-size-lg {
+  width: 90px;
+  height: 90px;
+}
+
+.skill-node-size-xl {
+  width: 100px;
+  height: 100px;
+}
+
+/* Content styling */
+.skill-node-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.skill-node-icon {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.skill-node-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.skill-node-level {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+/* State styling */
+.skill-node.locked {
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+.skill-node.unlocked {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.skill-node.selected {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8), 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Progress bar */
+.skill-level-progress {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  margin-top: 2px;
+  overflow: hidden;
+}
+
+.skill-level-progress-bar {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
