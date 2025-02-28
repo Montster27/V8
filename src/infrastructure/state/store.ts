@@ -9,6 +9,7 @@ import resourcesReducer from './resourcesSlice';
 import timeReducer from './slices/timeSlice';
 import skillsReducer from './slices/skillsSlice';
 import eventsReducer from './slices/eventsSlice';
+import activitiesReducer from './slices/activitiesSlice';
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ export const store = configureStore({
     time: timeReducer,
     skills: skillsReducer,
     events: eventsReducer,
+    activities: activitiesReducer,
   },
 });
 

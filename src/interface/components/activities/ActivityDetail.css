@@ -1,0 +1,189 @@
+/* /Users/montysharma/Documents/v8/MMV08/src/interface/components/activities/ActivityDetail.css */
+
+.activity-detail {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.no-activity-selected {
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.activity-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-detail-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.activity-detail .activity-category {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #666;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.activity-description {
+  margin-bottom: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.activity-metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.activity-duration,
+.activity-location,
+.activity-repeatability {
+  font-size: 14px;
+}
+
+.activity-effects {
+  margin-bottom: 20px;
+}
+
+.activity-effects h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.activity-effects ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.activity-effects li {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.activity-effects li.positive {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.activity-effects li.negative {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.activity-scheduling {
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+}
+
+.activity-scheduling h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+.time-selector {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-selector label {
+  font-weight: bold;
+  min-width: 80px;
+}
+
+.time-selector input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.end-time {
+  margin-bottom: 16px;
+  color: #666;
+  font-size: 14px;
+}
+
+.scheduling-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.schedule-button,
+.cancel-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.schedule-button {
+  background-color: #1976d2;
+  color: white;
+}
+
+.schedule-button:hover {
+  background-color: #1565c0;
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.scheduling-message {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.scheduling-message.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.scheduling-message.error {
+  background-color: #ffebee;
+  color: #c62828;
+}

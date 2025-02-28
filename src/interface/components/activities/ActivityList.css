@@ -1,0 +1,145 @@
+/* /Users/montysharma/Documents/v8/MMV08/src/interface/components/activities/ActivityList.css */
+
+.activity-list {
+  width: 100%;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #f8f8f8;
+}
+
+.activity-list h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.activity-count {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.no-activities {
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+  margin-top: 16px;
+  background-color: #fafafa;
+}
+
+.activity-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.activity-item {
+  background-color: white;
+  border-radius: 4px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item.selected {
+  background-color: #e3f2fd;
+  border-left: 3px solid #1976d2;
+}
+
+/* Category color indicators */
+.activity-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.activity-item.category-academic::before { background-color: #4285f4; } /* Blue */
+.activity-item.category-social::before { background-color: #ea4335; }   /* Red */
+.activity-item.category-leisure::before { background-color: #fbbc05; }  /* Yellow */
+.activity-item.category-work::before { background-color: #34a853; }     /* Green */
+.activity-item.category-health::before { background-color: #8e44ad; }   /* Purple */
+.activity-item.category-rest::before { background-color: #3498db; }     /* Light Blue */
+.activity-item.category-special::before { background-color: #e67e22; }  /* Orange */
+
+.activity-item h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.activity-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.activity-category {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #666;
+  text-transform: capitalize;
+}
+
+/* Category label colors */
+.activity-item.category-academic .activity-category { background-color: #e8f0fe; color: #4285f4; }
+.activity-item.category-social .activity-category { background-color: #fce8e6; color: #ea4335; }
+.activity-item.category-leisure .activity-category { background-color: #fff8e1; color: #f57c00; }
+.activity-item.category-work .activity-category { background-color: #e8f5e9; color: #34a853; }
+.activity-item.category-health .activity-category { background-color: #f3e5f5; color: #8e44ad; }
+.activity-item.category-rest .activity-category { background-color: #e3f2fd; color: #3498db; }
+.activity-item.category-special .activity-category { background-color: #fff3e0; color: #e67e22; }
+
+.activity-duration {
+  color: #777;
+}
+
+.activity-description {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .activity-items {
+    grid-template-columns: 1fr;
+  }
+  
+  .activity-list {
+    padding: 8px;
+    max-height: 500px;
+  }
+}

@@ -1,0 +1,136 @@
+/* /Users/montysharma/Documents/v8/MMV08/src/interface/components/activities/ScheduledActivities.css */
+
+.scheduled-activities {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.active-activities,
+.upcoming-activities {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.scheduled-activities h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.no-activities {
+  color: #666;
+  font-style: italic;
+  padding: 12px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.activity-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-item {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  padding: 12px;
+  transition: transform 0.2s;
+}
+
+.activity-item:hover {
+  transform: translateY(-2px);
+}
+
+.activity-item.active {
+  border-left: 4px solid #4caf50;
+}
+
+.activity-item.upcoming {
+  border-left: 4px solid #2196f3;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.activity-header h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.activity-category {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #666;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.activity-times {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.progress-container {
+  margin-top: 12px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #4caf50;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.7);
+}
+
+.activity-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancel-activity {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancel-activity:hover {
+  background-color: #d32f2f;
+}

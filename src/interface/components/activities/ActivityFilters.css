@@ -1,0 +1,129 @@
+/* /Users/montysharma/Documents/v8/MMV08/src/interface/components/activities/ActivityFilters.css */
+
+.activity-filters {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.filter-section {
+  margin-bottom: 16px;
+}
+
+.filter-section h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.category-filters,
+.location-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-checkbox,
+.location-checkbox,
+.availability-toggle {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.category-checkbox input,
+.location-checkbox input,
+.availability-toggle input {
+  margin-right: 6px;
+}
+
+.sort-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.clear-filters-button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.clear-filters-button:hover {
+  background-color: #f0f0f0;
+  border-color: #999;
+}
+
+/* Filter tags for applied filters */
+.applied-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 12px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.filter-tag button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 6px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .category-filters,
+  .location-filters {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .activity-filters {
+    padding: 12px;
+  }
+}
+
+/* Category color indicators */
+.category-checkbox.academic { color: #4285f4; } /* Blue */
+.category-checkbox.social { color: #ea4335; }   /* Red */
+.category-checkbox.leisure { color: #fbbc05; }  /* Yellow */
+.category-checkbox.work { color: #34a853; }     /* Green */
+.category-checkbox.health { color: #8e44ad; }   /* Purple */
+.category-checkbox.rest { color: #3498db; }     /* Light Blue */
+.category-checkbox.special { color: #e67e22; }  /* Orange */

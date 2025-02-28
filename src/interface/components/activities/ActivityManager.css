@@ -1,0 +1,163 @@
+/* /Users/montysharma/Documents/v8/MMV08/src/interface/components/activities/ActivityManager.css */
+
+.activity-manager {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+}
+
+.activity-manager-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-manager-tabs {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  padding: 12px 20px;
+  background-color: #f5f5f5;
+  border: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+}
+
+.tab.active {
+  background-color: #2196f3;
+  color: white;
+  font-weight: bold;
+}
+
+/* Quick category filters */
+.quick-category-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+.category-filter {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 16px;
+  background-color: #f0f0f0;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-filter:hover {
+  background-color: #e0e0e0;
+}
+
+.category-filter.active {
+  background-color: #2196f3;
+  color: white;
+  font-weight: 500;
+}
+
+/* Category-specific styles */
+.category-filter.academic {
+  background-color: #e8f0fe;
+  color: #4285f4;
+}
+
+.category-filter.academic.active {
+  background-color: #4285f4;
+  color: white;
+}
+
+.category-filter.social {
+  background-color: #fce8e6;
+  color: #ea4335;
+}
+
+.category-filter.social.active {
+  background-color: #ea4335;
+  color: white;
+}
+
+.category-filter.leisure {
+  background-color: #fff8e1;
+  color: #fbbc05;
+}
+
+.category-filter.leisure.active {
+  background-color: #fbbc05;
+  color: white;
+}
+
+.category-filter.health {
+  background-color: #f3e5f5;
+  color: #8e44ad;
+}
+
+.category-filter.health.active {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.category-filter.rest {
+  background-color: #e3f2fd;
+  color: #3498db;
+}
+
+.category-filter.rest.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.activity-manager-content {
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.browse-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .browse-view {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-category-filters {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+
+.activity-list-container {
+  width: 100%;
+}
+
+.activity-detail-container {
+  width: 100%;
+}
+
+.scheduled-view {
+  width: 100%;
+}

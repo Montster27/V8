@@ -8,6 +8,7 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { SkillManager } from '../../../domain/services/SkillManager';
 import { SkillThreadType } from '../../../domain/SkillTypes';
 import { SkillNode } from '../../../domain/models/SkillNode';
+import { SkillThread } from '../../../domain/models/SkillThread';
 import { RootState } from '../store';
 
 // Define serializable versions of our domain objects
@@ -194,15 +195,18 @@ function deserializeSkillManager(state: SkillsState): SkillManager {
   for (const threadType of Object.keys(state.threads) as SkillThreadType[]) {
     const serThread = state.threads[threadType];
     
-    // Create thread domain object
-    const thread = new skillManager.getThread(threadType) || {
-      type: serThread.type,
-      name: serThread.name,
-      description: serThread.description,
-      color: serThread.color,
-      icon: serThread.icon,
-      skillNodes: new Map()
-    };
+    // Create thread domain object properly as an instance of SkillThread
+    let thread = skillManager.getThread(threadType);
+    if (!thread) {
+      thread = new SkillThread({
+        type: serThread.type,
+        name: serThread.name,
+        description: serThread.description,
+        color: serThread.color,
+        icon: serThread.icon,
+        skillNodes: new Map()
+      });
+    }
     
     // Add nodes to thread
     for (const nodeId of Object.keys(serThread.skillNodes)) {
@@ -231,7 +235,7 @@ function deserializeSkillManager(state: SkillsState): SkillManager {
     }
     
     // Add thread to manager
-    skillManager = skillManager.addThread(thread as any); // Type assertion
+    skillManager = skillManager.addThread(thread);
   }
   
   return skillManager;
