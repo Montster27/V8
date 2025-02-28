@@ -1,21 +1,27 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './infrastructure/state/store';
+import { ResourcesPanel } from './interface/components/resources/ResourcesPanel';
 import './App.css';
 
 function App() {
-  const [count, setCount] = React.useState(0);
-
   return (
-    <div className="App">
-      <h1>The Middle Age Multiverse</h1>
-      <div>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+    <Provider store={store}>
+      <div className="App">
+        <header>
+          <h1>The Middle Age Multiverse</h1>
+          <p>Resource Management Test</p>
+        </header>
+        
+        <main>
+          <ResourcesPanel />
+        </main>
+        
+        <footer>
+          <p>Mock project for end-to-end testing of the setup</p>
+        </footer>
       </div>
-    </div>
+    </Provider>
   );
 }
 

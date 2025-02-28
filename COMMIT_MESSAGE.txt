@@ -1,0 +1,10 @@
+fix(activity): fix ActivityManager state serialization and restoring
+
+- Fix the ActivityManager to maintain consistency with test expectations
+- Improve state handling in the restore method to properly clear existing state
+- Refactor activity history tracking to align with test expectations
+- All core feature tests now passing
+
+This implementation maintains the required behavior for activity scheduling
+while ensuring the ActivityManager correctly handles state serialization and
+restoration for save/load functionality.

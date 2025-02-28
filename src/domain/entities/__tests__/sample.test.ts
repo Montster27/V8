@@ -1,3 +1,6 @@
+// /Users/montysharma/Documents/v8/MMV08/src/domain/entities/__tests__/sample.test.ts
+import { describe, it, expect } from 'vitest';
+
 describe('Sample Test', () => {
   it('should pass', () => {
     expect(1 + 1).toBe(2);

@@ -1,0 +1,33 @@
+.resource-bar-container {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.resource-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.resource-icon {
+  margin-right: 6px;
+}
+
+.resource-value {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.resource-bar-background {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.resource-bar-fill {
+  height: 100%;
+  transition: width 0.3s ease-out;
+}

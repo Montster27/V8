@@ -41,12 +41,13 @@ export class TimeValue {
   }
 
   /**
-   * Get the game time as a formatted string
+   * Get the game time as a formatted string (24-hour format)
    */
   get formattedTime(): string {
     return this.date.toLocaleTimeString([], { 
       hour: '2-digit', 
-      minute: '2-digit' 
+      minute: '2-digit',
+      hour12: false // Use 24-hour format
     });
   }
 
